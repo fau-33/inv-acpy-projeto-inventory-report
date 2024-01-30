@@ -1,8 +1,14 @@
+from abc import ABC, abstractmethod
 from typing import Dict, Type
 
 
-class Importer:
-    pass
+class Importer(ABC):
+    def __init__(self, path: str):
+        self.path = path
+
+    @abstractmethod
+    def import_data(self) -> list:
+        pass
 
 
 class JsonImporter:
