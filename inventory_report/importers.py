@@ -1,5 +1,6 @@
+from typing import Dict, List, Type
+from inventory_report.product import Product
 from abc import ABC, abstractmethod
-from typing import Dict, Type
 
 
 class Importer(ABC):
@@ -7,18 +8,16 @@ class Importer(ABC):
         self.path = path
 
     @abstractmethod
-    def import_data(self) -> list:
+    def import_data(self) -> List[Product]:
         pass
 
 
-class JsonImporter:
-    def import_data(self) -> list:
-        return []
+class JsonImporter(Importer):
+    pass
 
 
 class CsvImporter:
-    def import_data(self) -> list:
-        return []
+    pass
 
 
 # Não altere a variável abaixo
