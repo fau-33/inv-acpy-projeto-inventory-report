@@ -12,11 +12,13 @@ class Importer(ABC):
 
 
 class JsonImporter:
-    pass
+    def import_data(self) -> list:
+        return []
 
 
 class CsvImporter:
-    pass
+    def import_data(self) -> list:
+        return []
 
 
 # Não altere a variável abaixo
