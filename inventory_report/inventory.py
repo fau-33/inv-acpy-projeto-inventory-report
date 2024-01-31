@@ -6,11 +6,11 @@ class Inventory:
     def __init__(self, data: Optional[List[Product]] = None):
         if data is None:
             data = []
-        self._data = data
+        self._data: List[Product] = data
 
     @property
     def data(self) -> List[Product]:
         return self._data.copy()
 
-    def add_data(self, new_data: List[Product]) -> None:
-        self._data.extend(new_data)
+    def add_data(self, data: List[Product]) -> None:
+        self._data.extend(data)
